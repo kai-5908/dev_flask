@@ -13,6 +13,7 @@ def create_app():
         SECRET_KEY="2AZSMss3p5QPbcY2hBsJ",
         SQLALCHEMY_DATABASE_URI=f"sqlite:///{Path(__file__).parent.parent / 'local.sqlite'}",
         SQLALCHEMY_TRACK_MODIFICATIONS=False,
+        SQLALCHEMY_ECHO=True,
     )
 
     db.init_app(app)
